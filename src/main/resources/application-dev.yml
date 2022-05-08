@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: zyn13162704912
+    url: jdbc:mysql://localhost:3306/company?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#springboot整合Mybatis框架
+#加载Mybatis配置文件
+mybatis:
+  mapper-locations: classpath:mapping/*Mapping.xml
+  type-aliases-package: com.example.MyBatisDemo.entity
+
+##showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
